@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal">
+
+        <Button
+            ohos:id="$+id:btn_insert"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="插入数据"
+            ohos:text_size="50fp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:btn_query"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="查询数据"
+            ohos:text_size="50fp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:btn_delete"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="删除数据"
+            ohos:text_size="50fp"
+            ohos:weight="1"/>
+
+        <Button
+            ohos:id="$+id:btn_update"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="更新数据"
+            ohos:text_size="50fp"
+            ohos:weight="1"/>
+
+    </DirectionalLayout>
+
+    <ListContainer
+        ohos:id="$+id:listText"
+        ohos:height="match_parent"
+        ohos:width="match_parent"/>
+
+</DirectionalLayout>
