@@ -89,25 +89,25 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     }
 
     //查询所有
-//    public void query() {
-//        users = dbManager.queryUser();
-//        listProvider.setUsers(users); //给适配器重新设置数据
-//    }
-
-    public List<User> query() {
-        String[] columns = new String[]{"id", "name", "age", "salary"};
-//        RdbPredicates rdbPredicates = new RdbPredicates("test").equalTo("age", 18).orderByAsc("salary");
-        RdbPredicates rdbPredicates = new RdbPredicates("test");
-        ResultSet resultSet = store.query(rdbPredicates, columns);
-        List<Student> students = new ArrayList<>();
-        if (resultSet.goToNextRow()) {
-            long id = Long.valueOf(resultSet.getString(0));
-            String name = resultSet.getString(1);
-            int age = Integer.valueOf(resultSet.getString(2));
-            double salary = Double.valueOf(resultSet.getString(3));
-            students.add(new Student(id, name, age, salary));
-        }
-        return students;
+    public void query() {
+        users = dbManager.queryUser();
+        listProvider.setUsers(users); //给适配器重新设置数据
     }
+
+//    public List<User> query() {
+//        String[] columns = new String[]{"id", "name", "age", "salary"};
+////        RdbPredicates rdbPredicates = new RdbPredicates("test").equalTo("age", 18).orderByAsc("salary");
+//        RdbPredicates rdbPredicates = new RdbPredicates("test");
+//        ResultSet resultSet = store.query(rdbPredicates, columns);
+//        List<Student> students = new ArrayList<>();
+//        if (resultSet.goToNextRow()) {
+//            long id = Long.valueOf(resultSet.getString(0));
+//            String name = resultSet.getString(1);
+//            int age = Integer.valueOf(resultSet.getString(2));
+//            double salary = Double.valueOf(resultSet.getString(3));
+//            students.add(new Student(id, name, age, salary));
+//        }
+//        return students;
+//    }
 
 }
